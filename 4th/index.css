@@ -1,0 +1,294 @@
+@media (max-width: 359px) {
+	html { font-size: 14px; }
+}
+@media (min-width: 360px) and (max-width: 639px) {
+	html { font-size: 16px; }
+}
+@media (min-width: 640px) and (max-width: 799px) {
+	html { font-size: 18px; }
+}
+@media (min-width: 800px) {
+	html { font-size: 20px; }
+}
+
+
+html, body { height: 100%; }
+body {
+	margin: 0;
+	background: #333;
+	line-height: 1;
+	font-family: 'Lantinghei SC', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, sans-serif;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: normal; }
+li { list-style-type: none; }
+a { text-decoration: none; }
+img { vertical-align: top; border: none; }
+
+
+.header {
+	position: relative;
+	min-height: 600px;
+	height: 100%;
+	overflow: hidden;
+	background: url(./images/header-bg.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+.header__boundary {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 100%;
+}
+.header__time {
+	margin-top: 70px;
+	font-family: 'Source Code Pro', sans-serif;
+	font-size: 1.8rem;
+}
+.header__address {
+	margin-top: 15px;
+	display: block;
+	line-height: 1.3;
+	font-style: normal;
+	font-size: 1rem;
+}
+.header__apply {
+	display: block;
+	width: 10rem;
+	height: 3rem;
+	line-height: 3rem;
+	border-radius: 1.5rem;
+	margin: 80px auto 0 auto;
+	background: rgba(255, 255, 255, 0.3);
+	color: #f0f0f0;
+	transition-duration: 0.3s;
+	transition-property: background, color;
+}
+
+@media (max-width: 639px) {
+	.header__title img {
+		max-width: 400px;
+		width: 80%;
+	}
+}
+@media (min-width: 640px) {
+	.header__title img {
+		width: 500px;
+		height: 108px;
+	}
+}
+
+
+.section { background: #fefefe; }
+@media (max-width: 639px) {
+	.section {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+}
+@media (min-width: 640px) and (max-width: 799px) {
+	.section {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+	}
+}
+@media (min-width: 800px) {
+	.section {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+}
+.section__title {
+	font-size: 1.8rem;
+	font-family: 'Microsoft JhengHei', 'STHeiti', SimHei;
+	text-align: center;
+	color: #000;
+}
+@media (max-width: 639px) {
+	.section__body { margin-top: 2rem; }
+}
+@media (min-width: 640px) {
+	.section__body { margin-top: 3rem; }
+}
+
+
+@media (max-width: 1039px) {
+	.boundary {
+		margin-left: 6%;
+		margin-right: 6%;
+	}
+}
+@media (min-width: 1040px) {
+	.boundary {
+		width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+.content {
+	line-height: 1.7;
+	font-size: 0.9rem;
+}
+.content h3 {
+	margin: 0.65rem 0 0.2rem 0;
+	font-size: 1.2rem;
+}
+.content h3:first-child { margin-top: 0; }
+.content li {
+	margin-left: 1.5em;
+	list-style-type: disc;
+}
+
+
+.section-schedule { background: #222; }
+.section-schedule__title { color: #fff; }
+
+.section-schedule__list {
+	position: relative;
+	padding-left: 80px;
+	color: #999;
+}
+.section-schedule__list__item {
+	padding: 45px 0 45px 40px;
+	border-left: 8px solid #ffce00;
+}
+.section-schedule__list__item:first-child { padding-top: 30px; }
+.section-schedule__list__item:last-child { padding-bottom: 30px; }
+.section-schedule__list__item__time {
+	position: absolute;
+	left: 0;
+	line-height: 32px;
+	color: #ddd;
+}
+.section-schedule__list__item__title {
+	line-height: 32px;
+	font-size: 1.2rem;
+	color: #ddd;
+}
+.section-schedule__list__item__title:before {
+	position: absolute;
+	left: 68px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	border: 5px solid #222;
+	background: #ddd;
+	content: ' ';
+}
+.section-schedule__list__item__summary,
+.section-schedule__list__item__lecturer,
+.section-schedule__list__item__download {
+	margin-top: 12px;
+	font-size: 0.8rem;
+	line-height: 1.5;
+}
+.section-schedule__list__item__download {
+	display: block;
+	width: 5rem;
+	height: 2rem;
+	line-height: 2rem;
+	background: #ffce00;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #383838;
+}
+
+.section-schedule__list__item-rest {
+	border-left-style: dotted;
+}
+.section-schedule__list__item-rest .section-schedule__list__item__title,
+.section-schedule__list__item-rest .section-schedule__list__item__time {
+	color: #999;
+}
+.section-schedule__list__item-rest .section-schedule__list__item__title:before {
+	background: #999;
+}
+
+@media (max-width: 639px) {
+	.section-schedule__list { padding-left: 56px; }
+	.section-schedule__list__item {
+		padding-left: 20px;
+		padding-bottom: 30px;
+		border-left-width: 6px;
+	}
+	.section-schedule__list__item__time,
+	.section-schedule__list__item__title {
+		line-height: 30px;
+	}
+	.section-schedule__list__item__title:before {
+		left: 46px;
+		width: 20px;
+		height: 20px;
+		border-width: 3px;
+	}
+	.section-schedule__list__item__time,
+	.section-schedule__list__item__title {
+		line-height: 26px;
+	}
+	.section-schedule__list__item__summary,
+	.section-schedule__list__item__lecturer,
+	.section-schedule__list__item__download {
+		margin-top: 8px;
+	}
+}
+@media (min-width: 640px) and (max-width: 720px) {
+	.section-schedule__list { padding-left: 60px; }
+	.section-schedule__list__item__title:before { left: 49px; }
+}
+@media (max-width: 720px) {
+	.section-schedule__list__item { padding-left: 20px; }
+}
+
+
+.section-apply { background: #fcfaf1; }
+
+
+.section-place__body__map { text-align: center; }
+.section-place__body__map img { width: 100%; }
+
+@media (max-width: 959px) {
+	.section-place__body__map { margin-top: 0.65rem; }
+}
+
+@media (min-width: 960px) {
+	.section-place__body {
+		padding-right: 560px;
+		overflow: hidden;
+	}
+	.section-place__body__content {
+		float: left;
+		width: 100%;
+	}
+	.section-place__body__map {
+		float: right;
+		width: 500px;
+		margin-right: -560px;
+	}
+}
+
+
+.footer {
+	padding: 1.2rem 0;
+	background: #222;
+	line-height: 1.6;
+	font-size: 0.8rem;
+	text-align: right;
+	color: #999;
+}
+.footer a { color: #ffce00; }
+
+@media (max-width: 409px) {
+	.footer a { display: block; }
+}
+@media (max-width: 799px) {
+	.footer { text-align: center; }
+}

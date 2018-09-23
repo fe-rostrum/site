@@ -1,0 +1,237 @@
+@font-face {
+	font-family: "Segoe UI Light";
+	src: url('segoe-ui-light.eot');
+	src: url('segoe-ui-light.eot?#iefix') format('embedded-opentype'),
+		url('segoe-ui-light.woff') format('woff'),
+		url('segoe-ui-light.ttf') format('truetype');
+}
+
+
+body {
+	margin: 0;
+	background: #f5f5f5;
+	line-height: 1;
+	font-family: 'Segoe UI Light', 'Pingfang SC', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, sans-serif;
+	font-size: 0.18rem;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, form { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: normal; }
+li { list-style-type: none; }
+a { text-decoration: none; color: #007acc; }
+a:hover { text-decoration: underline; color: #23527c; }
+
+
+.header {
+	padding: 0.32rem 0.5rem 0.45rem 0.5rem;
+	background: #373277;
+	line-height: 1.6;
+	font-size: 0.36rem;
+	color: #b5a0ff;
+}
+.header:before { content: 'var feSalon ='; }
+.header__title {
+	position: relative;
+	padding: 0 0.3rem 0 0.54rem;
+	margin: 0.05rem 0 0 0.4rem;
+	color: #fff;
+}
+.header__title:before,
+.header__title:after { position: absolute; color: rgba(255, 255, 255, 0.4); }
+.header__title:before {
+	left: 0;
+	top: 0;
+	content: '{';
+}
+.header__title:after {
+	right: 0;
+	bottom: 0;
+	content: '};';
+}
+
+
+.venue {
+	position: relative;
+	height: 3.5rem;
+	overflow: hidden;
+}
+.venue__map {
+	height: 100%;
+	background: #333;
+	display: block;
+	text-align: right;
+}
+.venue__map img { height: 100%; }
+.venue__mask, .venue__address { position: absolute; }
+.venue__mask {
+	left: 0;
+	top: 0;
+	width: 2.8rem;
+	height: 100%;
+	background: #ffc000;
+	-webkit-transform: skewX(-15deg);
+	-moz-transform: skewX(-15deg);
+	-ms-transform: skewX(-15deg);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	transform-origin: 0 0;
+	transform: skewX(-15deg);
+}
+
+.venue__address {
+	top: 0.9rem;
+	left: 0.2rem;
+	line-height: 1.5;
+	font-style: normal;
+	font-size: 0.28rem;
+	color: #333;
+}
+.venue__address:before { content: 'feSalon.venue = '; }
+.venue__address__seg {
+	padding-left: 0.12rem;
+	display: block;
+	font-size: 0.2rem;
+}
+.venue__address:before,
+.venue__address__seg:before,
+.venue__address__seg:after { color: rgba(255, 255, 255, 0.7); }
+.venue__address__seg:first-child { margin-top: 0.05rem; }
+.venue__address__seg:before { content: "'"; }
+.venue__address__seg:after { content: "' +"; }
+.venue__address__seg:last-child:after { content: "' ;"; }
+
+
+.topic {
+	padding: 0.45rem 0.2rem;
+	background: #fff;
+	color: #999;
+}
+.topic__list { line-height: 1.5; font-size: 0.34rem; }
+.topic__list:before { content: 'feSalon.topics = ['; }
+.topic__list:after { content: '];'; }
+.topic__list__item {
+	position: relative;
+	padding: 0 0.55rem 0 0.5rem;
+	margin: 0.4rem;
+	font-size: 0.24rem;
+	color: #666;
+}
+.topic__list__item:before,
+.topic__list__item:after { position: absolute; }
+.topic__list__item:before {
+	left: 0;
+	top: 0.03rem;
+	content: '{';
+}
+.topic__list__item:after {
+	right: 0;
+	bottom: 0.02rem;
+	content: '},';
+}
+.topic__list__item:last-child:after { content: '}'; }
+.topic__list__item>* { margin: 0.06rem 0; }
+.topic__list__item>*:after { content: "',"; }
+.topic__list__item>*:before,
+.topic__list__item>*:after { color: #ccc !important; }
+.topic__list__item>*:last-child:after { content: "'"; }
+.topic__list__item__title { font-size: 0.3rem; color: #373277; }
+.topic__list__item__title:before { content: "title: '"; }
+.topic__list__item__summary:before { content: "summary: '"; }
+.topic__list__item__lecturer { color: #ffc000; }
+.topic__list__item__lecturer:before { content: "lecturer: '"; }
+.topic__list__item__duration:before { content: "duration: '"; }
+.topic__list__item__courseware:before { content: "courseware: '"; }
+
+
+.sign-up {
+	background: #333;
+	padding: 0.45rem 0.2rem;
+	font-size: 0.3rem;
+	line-height: 1.5;
+	color: #fff;
+}
+.sign-up:before { content: 'feSalon.signUp'; }
+.sign-up__form { position: relative; }
+.sign-up__form__controls {
+	position: relative;
+	display: inline-block;
+	padding-left: 0.45rem;
+	margin-left: 0.4rem;
+}
+.sign-up__form__controls:before,
+.sign-up__form__controls:after { position: absolute; }
+.sign-up__form__controls:before {
+	left: 0;
+	top: 0.05rem;
+	content: '(';
+}
+.sign-up__form__controls:after {
+	right: 0;
+	bottom: 0.05rem;
+	content: ');';
+}
+.sign-up__form input {
+	-webkit-appearance: none;
+	font-family: inherit;
+	outline: none;
+}
+.sign-up__form__controls__row { margin: 0.1rem 0; font-size: 0.24rem; }
+.sign-up__form__controls__row input[type=text] {
+	width: 1.5rem;
+	background: none;
+	border: none;
+	font-size: inherit;
+	color: #ffc000;
+}
+.sign-up__form__controls__row input[type=text]::-webkit-input-placeholder { color: #999; }
+.sign-up__form__controls__row input[type=text]::-moz-placeholder { color: #999; }
+.sign-up__form__controls__row input[type=text]:-ms-input-placeholder { color: #999; }
+.sign-up__form__controls__row__hint { font-size: 0.2rem; color: #888; }
+.sign-up__form__result {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	line-height: 0.48rem;
+}
+.sign-up__form__result__submit {
+	width: 1.2rem;
+	height: 0.48rem;
+	border-radius: 0.05rem;
+	border: none;
+	background: #ffc000;
+	font-size: 0.24rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+.applicant {
+	padding: 0.45rem 0.2rem;
+	background: #333;
+	color: #aaa;
+}
+.applicant__list { font-size: 0.34rem; }
+.applicant__list:before { content: 'feSalon.applicants = ['; }
+.applicant__list:after { content: '];'; }
+.applicant__list__item {
+	margin: 0.15rem 0;
+	padding-left: 0.5rem;
+	font-size: 0.26rem;
+}
+.applicant__list__item:first-child { margin-top: 0.3rem; }
+.applicant__list__item:last-child { margin-bottom: 0.3rem; }
+.applicant__list__item:before { padding-right: 0.15rem; content: '{'; }
+.applicant__list__item:after { padding-left: 0.15rem; content: '},'; }
+.applicant__list__item:last-child:after { content: '}'; }
+.applicant__list__item-comment { margin-top: 0.3rem; color: #666; }
+.applicant__list__item-comment:before { content: '// '; }
+.applicant__list__item-comment:after { content: ''; }
+.applicant__list__item>*:before,
+.applicant__list__item>*:after { color: #aaa !important; }
+.applicant__list__item>*:after { content: "',"; }
+.applicant__list__item>*:last-child:after { content: "'"; }
+.applicant__list__item__fullname,
+.applicant__list__item__mobile { color: #fff; }
+.applicant__list__item__fullname:before { content: "fullname: '"; }
+.applicant__list__item__mobile:before { content: "mobileNO: '"; }

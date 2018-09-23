@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>前端技术沙龙</title>
+<script src="js/scale.js"></script>
+<link rel="stylesheet" href="style/index.css" />
+</head>
+
+<body>
+<header class="header">
+	<h1 class="header__title">title: 'Frontend salon (1st season)',<br />time: new Date(2015, 11, 26, 15)</h1>
+</header>
+
+<section class="venue">
+	<a href="http://map.qq.com/?l=358971275" target="_blank" id="venue__map" class="venue__map"><img src="http://apis.map.qq.com/ws/staticmap/v2/?center=23.12496,113.37068&amp;zoom=16&amp;size=640*350&amp;maptype=roadmap&amp;markers=size:large|color:0xFFCCFF|label:k|23.12496,113.37068&amp;key=6LABZ-VWYH4-VAKUM-XVR4Q-4UJZ6-HZBMW" alt="地图" /></a>
+	<div class="venue__mask"></div>
+	<address class="venue__address">
+		<span class="venue__address__seg">广州市天河区</span>
+		<span class="venue__address__seg">建中路36号</span>
+		<span class="venue__address__seg">裕桥商务大厦8楼</span>
+		<span class="venue__address__seg">红人馆会议室</span>
+	</address>
+</section>
+
+<section class="topic">
+	<ul class="topic__list">
+		<li class="topic__list__item">
+			<h2 class="topic__list__item__title">移动端多屏适配方案</h2>
+			<p class="topic__list__item__summary">介绍一种简化移动前端开发流程的JS+SASS解决方案，只用1个样式表就能适配所有屏幕，并解决“高清屏1px border”、“rem单位换算”、“横竖屏切换”等问题。</p>
+			<p class="topic__list__item__lecturer">刘道杰</p>
+			<p class="topic__list__item__duration">约30分钟</p>
+			<p class="topic__list__item__courseware"><a href="http://pan.baidu.com/s/1o7hwski" target="_blank">http://pan.baidu.com/s/1o7hwski</a></p>
+		</li>
+		<li class="topic__list__item">
+			<h2 class="topic__list__item__title">异步流程控制</h2>
+			<p class="topic__list__item__summary">无论是浏览器端还是Node.js端的开发，都会涉及大量异步操作，而调用这些异步方法时又会涉及到执行顺序问题。本主题分别介绍通过Async、Promise和ES6 Generator对异步流程进行控制，并对比优劣。</p>
+			<p class="topic__list__item__lecturer">罗礼权</p>
+			<p class="topic__list__item__duration">约40分钟</p>
+			<p class="topic__list__item__courseware"><a href="http://pan.baidu.com/s/1c0UPzmK" target="_blank">http://pan.baidu.com/s/1c0UPzmK</a></p>
+		</li>
+		<li class="topic__list__item">
+			<h2 class="topic__list__item__title">浅谈前端MVVM框架</h2>
+			<p class="topic__list__item__summary">介绍MVVM的发展历史和理念；分别使用jQuery与MVVM框架实现同一个功能，对比开发思路与实现上的区别。</p>
+			<p class="topic__list__item__lecturer">肖志强</p>
+			<p class="topic__list__item__duration">约40分钟</p>
+			<p class="topic__list__item__courseware"><a href="http://pan.baidu.com/s/1nuienrz" target="_blank">http://pan.baidu.com/s/1nuienrz</a></p>
+		</li>
+		<li class="topic__list__item">
+			<h2 class="topic__list__item__title">Gulp vs FIS</h2>
+			<p class="topic__list__item__summary">介绍Gulp和FIS两种自动化流程工具，分别对比两者的使用方法、性能及优缺点；探讨如何选取适合自己的前端资源构建工具。</p>
+			<p class="topic__list__item__lecturer">谭迪伦</p>
+			<p class="topic__list__item__duration">约40分钟</p>
+			<p class="topic__list__item__courseware"><a href="http://pan.baidu.com/s/1bnLycWn" target="_blank">http://pan.baidu.com/s/1bnLycWn</a></p>
+		</li>
+	</ul>
+</section>
+
+<!-- <section class="sign-up">
+	<form id="sign-up__form" class="sign-up__form" method="get" action="signup" target="sign-up__form-target">
+		<div class="sign-up__form__controls">
+			<p class="sign-up__form__controls__row">
+				'<input type="text" name="fullname" placeholder="真实姓名" maxlength="10" />',
+				<span class="sign-up__form__controls__row__hint">// NOT nickname</span>
+			</p>
+			<p class="sign-up__form__controls__row">
+				'<input type="text" name="company" placeholder="公司" maxlength="20" />',
+				<span class="sign-up__form__controls__row__hint">// short name</span>
+			</p>
+			<p class="sign-up__form__controls__row">
+				'<input type="text" name="mobile-no" placeholder="手机号码" maxlength="11" />'
+			</p>
+		</div>
+		<div class="sign-up__form__result">
+			<input type="submit" value="Run!" class="sign-up__form__result__submit" />
+		</div>
+	</form>
+	<iframe id="sign-up__form-target" name="sign-up__form-target" style="display: none;"></iframe>
+</section>
+
+<script>
+document.getElementById('sign-up__form').addEventListener('submit', function(e) {
+	var fullName = this.querySelector('input[name=fullname]').value.trim(),
+		company = this.querySelector('input[name=company]').value.trim(),
+		mobileNO = this.querySelector('input[name=mobile-no]').value.trim(),
+		errors = [ ];
+
+	if ( !fullName ) { errors.push('"fullname" can not be empty'); }
+	if ( !company ) { errors.push('"company" can not be empty'); }
+	if ( !mobileNO ) {
+		errors.push('"mobile-no" can not be empty');
+	} else if ( !/^1[1-9]\d{9}$/.test(mobileNO) ) {
+		errors.push('invalid "mobile-no"');
+	}
+
+	if (errors.length) {
+		e.preventDefault();
+		alert( errors.join('\n') );
+	} else {
+		this.querySelector('.sign-up__form__result').innerHTML = 'Success!';
+	}
+}, false);
+</script> -->
+</body>
+</html>
